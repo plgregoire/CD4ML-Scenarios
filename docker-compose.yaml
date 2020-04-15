@@ -99,6 +99,7 @@ services:
   dev:
     container_name: dev
     image: jupyter/minimal-notebook:latest
+    user: "${UID}:${GID}"
     environment:
       - JUPYTER_ENABLE_LAB=yes
     ports:
